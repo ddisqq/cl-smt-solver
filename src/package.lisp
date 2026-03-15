@@ -10,7 +10,11 @@
   (:nicknames #:smt)
   (:documentation "Z3-style SMT constraint solver in pure Common Lisp.")
   (:export
-   #:with-smt-solver-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-smt-solver-timing
    #:smt-solver-batch-process
    #:smt-solver-health-check;; Solver Management
    #:make-solver
@@ -151,6 +155,10 @@
 (defpackage #:cl-smt-solver.test
   (:use #:cl #:cl-smt-solver)
   (:export
-   #:with-smt-solver-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-smt-solver-timing
    #:smt-solver-batch-process
    #:smt-solver-health-check#:run-tests))
