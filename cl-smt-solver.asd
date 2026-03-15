@@ -10,17 +10,15 @@
   :description "Pure Common Lisp SMT solver with Boolean, integer, and bitvector theories"
   :version "0.1.0"
   :author ""
-  :license "MIT"
+  :license "Apache-2.0"
   :depends-on ()
   :serial t
   :components ((:file "package")
                (:module "src"
-                :serial t
-                :components ((:file "util")
-                             (:file "expr")
-                             (:file "theory")
-                             (:file "dpll")
-                             (:file "solver"))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-smt-solver" :depends-on ("package" "conditions" "types"))))))
   :in-order-to ((asdf:test-op (test-op "cl-smt-solver/test"))))
 
 (asdf:defsystem #:"cl-smt-solver/test"
