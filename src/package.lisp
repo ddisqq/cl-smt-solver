@@ -10,6 +10,8 @@
   (:nicknames #:smt)
   (:documentation "Z3-style SMT constraint solver in pure Common Lisp.")
   (:export
+   #:deep-copy-list
+   #:group-by-count
    #:identity-list
    #:flatten
    #:map-keys
@@ -155,6 +157,8 @@
 (defpackage #:cl-smt-solver.test
   (:use #:cl #:cl-smt-solver)
   (:export
+   #:deep-copy-list
+   #:group-by-count
    #:identity-list
    #:flatten
    #:map-keys
